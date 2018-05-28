@@ -1,0 +1,34 @@
+{
+  "name": "tonisormisson/status-history",
+  "type": "yii2-widget",
+  "license":"MIT",
+  "authors": [
+    {
+      "name": "Tõnis Ormisson",
+      "email": "tonis@andmemasin.eu"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4",
+    "yiisoft/yii2": ">=2.0.13",
+    "andmemasin/yii2-myabstract": "~2.3.10"
+  },
+
+  "autoload": {
+    "psr-4": {
+      "tonisormisson\\statushistory\\": ""
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
+}
