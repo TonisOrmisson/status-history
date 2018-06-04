@@ -50,7 +50,7 @@ class StatusHistory extends Widget
         \Yii::$app->i18n->translations['tostatus'] = [
             'class' => PhpMessageSource::class,
             'sourceLanguage' => 'en-US',
-            'basePath' => '@tonisormisson/statushistory/messages',
+            'basePath' => __DIR__ . '/messages',
         ];
     }
 }
