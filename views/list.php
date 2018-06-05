@@ -19,11 +19,11 @@ $formatter = new \yii\i18n\Formatter();
             function ($model) use ($formatter) {
                 /** @var $model \andmemasin\myabstract\HasStatusModel */
                 $user = $model->getUserCreated();
+                $title = (empty($model->statusModel->description) ? $model->statusModel->label : $model->statusModel->description);
+                $tag = Html::tag("span", $model->statusModel->label . ' ('. Html::encode($user->username).')', ['data-toggle' => "tooltip", 'title' => $title]);
                 return $formatter->asDatetime($model->timeCreated)
                     . ' - '
-                    . $model->statusModel->label
-                    . ' ('. Html::encode($user->username).')'
-                    ;
+                    . $tag;
             },
     ]);
     ?>
