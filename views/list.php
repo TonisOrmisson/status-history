@@ -9,9 +9,9 @@ $formatter = new \yii\i18n\Formatter();
 
 ?>
 <div id="<?=$widget->id?>">
-    <?php if($widget->showTitle):?>
-    <h3><?= Html::encode(Yii::t('tostatus','Status history'))?></h3>
-    <?php endif;?>
+    <?= ($widget->showTitle ? Html::tag("p", Yii::t('tostatus','Status history'), $widget->headerOptions) : null) ?>
+
+    <?= Html::beginTag("div", $widget->itemsOptions)?>
     <?=
     ListView::widget([
         'dataProvider' => $dataProvider,
@@ -27,5 +27,6 @@ $formatter = new \yii\i18n\Formatter();
             },
     ]);
     ?>
+    <?= Html::endTag("div")?>
 
 </div>

@@ -19,6 +19,9 @@ class StatusHistory extends Widget
 
     public $dataProviderOptions = [];
 
+    public $headerOptions = ['class' => 'h4'];
+
+    public $itemsOptions = [];
 
     public function run()
     {
