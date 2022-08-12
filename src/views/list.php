@@ -20,7 +20,7 @@ $formatter = Yii::$app->formatter;
                 if(!empty($model->statusModel)) {
                     $user = $model->getUserCreated();
                     $title = (empty($model->statusModel->description) ? $model->statusModel->label : $model->statusModel->description);
-                    $tag = Html::tag("span", $model->statusModel->label . ' ('. Html::encode($user->username).')', ['data-toggle' => "tooltip", 'title' => $title]);
+                    $tag = Html::tag("span", $model->statusModel->label . ' ('. Html::encode($user->getUsername()).')', ['data-toggle' => "tooltip", 'title' => $title]);
                     return $formatter->asDatetime($model->timeCreated)
                         . ' - '
                         . $tag;
