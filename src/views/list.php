@@ -1,11 +1,11 @@
 <?php
-/** @var \tonisormisson\statushistory\StatusHistory $widget */
-/** @var \yii\data\ArrayDataProvider $dataProvider */
+/** @var tonisormisson\statushistory\StatusHistory $widget */
+/** @var yii\data\ArrayDataProvider $dataProvider */
 
 use yii\helpers\Html;
 use yii\widgets\ListView;
 
-$formatter = new \yii\i18n\Formatter();
+$formatter = Yii::$app->formatter;
 
 ?>
 <div id="<?=$widget->id?>">
@@ -16,8 +16,7 @@ $formatter = new \yii\i18n\Formatter();
     ListView::widget([
         'dataProvider' => $dataProvider,
         'itemView' =>
-            function ($model) use ($formatter) {
-                /** @var $model \andmemasin\myabstract\HasStatusModel */
+            function (\andmemasin\myabstract\HasStatusModel $model) use ($formatter) {
                 if(!empty($model->statusModel)) {
                     $user = $model->getUserCreated();
                     $title = (empty($model->statusModel->description) ? $model->statusModel->label : $model->statusModel->description);

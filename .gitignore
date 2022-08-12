@@ -1,0 +1,6 @@
+.*
+!.gitignore
+!.github
+
+vendor/*
+composer.lock

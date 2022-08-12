@@ -12,16 +12,15 @@ class StatusHistory extends Widget
     public $model;
 
     /** @var string  */
-    public $id = 'status-history';
+    public string $id = 'status-history';
 
-    /** @var bool */
-    public $showTitle = true;
+    public bool $showTitle = true;
 
-    public $dataProviderOptions = [];
+    public array $dataProviderOptions = [];
 
-    public $headerOptions = ['class' => 'h4'];
+    public array $headerOptions = ['class' => 'h4'];
 
-    public $itemsOptions = [];
+    public array $itemsOptions = [];
 
     public function run()
     {
@@ -48,7 +47,7 @@ class StatusHistory extends Widget
             'dataProvider' => $dataProvider
         ]);
     }
-    public function registerTranslations()
+    public function registerTranslations() : void
     {
         \Yii::$app->i18n->translations['tostatus'] = [
             'class' => PhpMessageSource::class,
