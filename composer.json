@@ -1,5 +1,6 @@
 {
   "name": "tonisormisson/status-history",
+  "description": "Status history widget for Yii 2",
   "type": "yii2-widget",
   "license":"MIT",
   "authors": [
@@ -10,10 +11,10 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=8.0.2",
+    "php": ">=8.3.0",
 
-    "yiisoft/yii2": ">=2.0.13",
-    "andmemasin/yii2-myabstract": "^9.0"
+    "yiisoft/yii2": "^2.0.13",
+    "andmemasin/yii2-myabstract": "^10.0"
   },
   "require-dev": {
     "phpstan/phpstan": "^1.8"
@@ -26,7 +27,7 @@
   },
   "config": {
     "platform": {
-      "php": "8.0.2"
+      "php": "8.3.0"
     },
     "allow-plugins": {
       "yiisoft/yii2-composer": true
