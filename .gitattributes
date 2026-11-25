@@ -1,0 +1,7 @@
+# development-only files stay out of Composer dist archives (tests, docs, tool and CI configuration)
+/.github export-ignore
+/.gitignore export-ignore
+/scrutinizer.yml export-ignore
+/stan_autoload.php export-ignore
+/phpstan.neon export-ignore
+/.gitattributes export-ignore
